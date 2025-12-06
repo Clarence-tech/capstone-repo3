@@ -1,0 +1,51 @@
+#!/usr/bin/env python3
+"""
+Assignment 13 metrics script.
+
+Reads data/sample_data.csv and computes:
+- LFMC: Log Field Minimization Compliance
+- RMC: Redacted Metadata Coverage
+- SSDI: Synthetic Sampling Diversity Index
+- DPIR: Dataset Processing Integrity Rate
+"""
+
+import csv
+import hashlib
+import json
+from datetime import datetime
+from pathlib import Path
+
+# ----- Paths -----
+BASE_DIR = Path(__file__).resolve().parent.parent
+DATA_FILE = BASE_DIR / "data" / "sample_data.csv"
+DOCS_DIR = BASE_DIR / "docs"
+METRICS_FILE = DOCS_DIR / "metrics_summary.txt"
+DPIR_STATE_FILE = DOCS_DIR / "dpir_state.json"
+
+# ----- Metric Config -----
+# Minimal fields needed for analysis
+MINIMAL_FIELDS = {"timestamp", "event_type", "scenario", "result"}
+
+# Fields considered sensitive (should be redacted)
+SENSITIVE_FIELDS = {"user", "host"}
+
+# Expected scenario types for diversity check
+EXPECTED_SCENARIOS = {"normal", "error", "anomaly"}
+
+
+def read_rows():
+    """Read CSV rows from DATA_FILE."""
+    if not DATA_FILE.exists():
+        raise FileNotFoundError(f"Data file not found: {DATA_FILE}")
+
+    with DATA_FILE.open(newline="", encoding="utf-8") as f:
+        reader = csv.DictReader(f)
+        rows = list(reader)
+        fieldnames = reader.fieldnames or []
+        return fieldnames, rows
+
+
+# ---------- Metric 1: LFMC ----------
+def compute_lfmc(fieldnames):
+    """
+

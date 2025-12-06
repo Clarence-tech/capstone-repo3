@@ -1,0 +1,4 @@
+HOSTNAME_PATTERN = r".*internal.*"
+USERNAME_PATTERN = r"[A-Za-z0-9._%-]+"
+Replace any match with [REDACTED] before storing logs or datasets.
+

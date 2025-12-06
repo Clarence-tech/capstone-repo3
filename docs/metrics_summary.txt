@@ -1,0 +1,13 @@
+=== Metrics Run @ 2025-12-06T21:52:30Z ===
+Data file: /Users/wilfredcampbell/Desktop/capstone-repo3/data/sample_data.csv
+LFMC (Log Field Minimization Compliance): 33.33%
+  Minimal fields used: ['timestamp']
+  All fields present: ['status', 'timestamp', 'user']
+RMC (Redacted Metadata Coverage): 0.0%
+  Sensitive fields: ['user']
+  Sensitive values inspected: 5
+SSDI: N/A (no 'scenario' field or no data)
+DPIR (Processing Integrity Rate): 100.0%
+  Output hash: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+  Total runs: 1, Consistent runs: 1
+
