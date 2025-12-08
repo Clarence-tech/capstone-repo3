@@ -1,0 +1,9 @@
+Dependency: OpenAI ChatGPT
+Provider: OpenAI
+Model(s): gpt-5.1 Thinking (ChatGPT)
+Usage: Brainstorming, structure guidance, and wording suggestions for Capstone 698 assignments.
+Dates Used: 2025 10-25 to 2025-12-4
+
+Notes:
+- All final analysis, code, and written content were reviewed, edited, and approved by the student.
+- This file supports the C-SCRM dependency tracking described in docs/cscrm_note.md.
