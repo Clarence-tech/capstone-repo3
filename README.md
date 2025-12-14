@@ -18,3 +18,13 @@ SP 800-171 Rev.3, and SP 800-207 (Zero Trust Architecture).
    cd capstone-repo3
 
 
+## Week 15 Scholarly Pitch
+
+The Week 15 pitch deck is located in `docs/pitch/`.
+
+**Files:**
+- [week15_pitch.pptx](docs/pitch/week15_pitch.pptx)
+- [week15_pitch.pdf](docs/pitch/week15_pitch.pdf)
+
+This deck summarizes the project’s problem, supporting evidence, method, metrics, ethical safeguards, and CSF Current → Target Profile for the capstone study.
+
